@@ -12,14 +12,14 @@ public class NumberGuessingGame {
         int score = 0;
         boolean playAgain;
 
-        System.out.println("🎯 Welcome to the Number Guessing Game!");
+        System.out.println(" Welcome to the Number Guessing Game!");
 
         do {
             int targetNumber = random.nextInt(upperBound - lowerBound + 1) + lowerBound;
             int attempts = 0;
             boolean guessedCorrectly = false;
 
-            System.out.println("\n🔢 I have picked a number between " + lowerBound + " and " + upperBound + ".");
+            System.out.println("\n I have picked a number between " + lowerBound + " and " + upperBound + ".");
             System.out.println("You have " + maxAttempts + " attempts to guess it!");
 
             while (attempts < maxAttempts) {
@@ -28,7 +28,7 @@ public class NumberGuessingGame {
                 attempts++;
 
                 if (guess == targetNumber) {
-                    System.out.println("✅ Correct! You've guessed the number in " + attempts + " attempts.");
+                    System.out.println("Correct! You've guessed the number in " + attempts + " attempts.");
                     guessedCorrectly = true;
                     score++;
                     break;
@@ -42,7 +42,7 @@ public class NumberGuessingGame {
             }
 
             if (!guessedCorrectly) {
-                System.out.println("❌ You've run out of attempts! The number was: " + targetNumber);
+                System.out.println(" You've run out of attempts! The number was: " + targetNumber);
             }
 
             // Ask to play again
@@ -52,7 +52,7 @@ public class NumberGuessingGame {
 
         } while (playAgain);
 
-        System.out.println("\n🏁 Game Over. You won " + score + " round(s). Thanks for playing!");
+        System.out.println("\n Game Over. You won " + score + " round(s). Thanks for playing!");
         scanner.close();
     }
 }
